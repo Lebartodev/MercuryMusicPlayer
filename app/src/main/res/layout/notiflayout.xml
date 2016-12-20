@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#572626">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2d2d32">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/notif_song_image"
+            android:src="@drawable/test_album_image"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp" />
+
+        <TextView android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="Custom Notification Title"
+            android:text="Title"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/text"
+            android:layout_toRightOf="@+id/notif_song_image"
+            android:layout_toEndOf="@+id/notif_song_image"
+            android:layout_marginLeft="20dp" />
+
+        <TextView android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="Custom Notification Text"
+            android:text="Artist"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_alignTop="@+id/close_notif"
+            android:layout_toRightOf="@+id/notif_song_image"
+            android:layout_toEndOf="@+id/notif_song_image"
+            android:layout_marginLeft="20dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/notif_play"
+            android:src="@drawable/ic_play_white"
+            android:layout_alignTop="@+id/close_notif"
+            android:layout_toLeftOf="@+id/close_notif"
+            android:layout_toStartOf="@+id/close_notif"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/close_notif"
+            android:src="@drawable/error"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            style="Custom Notification Title"
+            android:id="@+id/notif_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/notif_play"
+            android:layout_toStartOf="@+id/notif_play"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

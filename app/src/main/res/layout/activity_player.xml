@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorController"
+    android:orientation="vertical">
+
+    <include layout="@layout/player_toolbar"/>
+
+    <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/album_art"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/test_album_image"
+        android:transitionName="imageTransition"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:thumb="@drawable/seekbar_tracker"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar"
+        android:maxHeight="20dp"
+        android:minHeight="20dp"
+        android:padding="0dp"
+        tools:progress="70"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/controllers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/album_art">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorController"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                app:srcCompat="@drawable/ic_back_white" />
+
+            <ImageView
+                android:id="@+id/play_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="25dp"
+                app:srcCompat="@drawable/ic_play_white" />
+
+            <ImageView
+                android:id="@+id/forward_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                app:srcCompat="@drawable/ic_next_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

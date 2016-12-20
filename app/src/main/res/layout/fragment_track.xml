@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.lebartodev.musicplayer.ui.fragment.TrackFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/track_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/track_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/controllers_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOverlay"
+        android:visibility="visible"
+        android:alpha="1"
+        android:layout_alignParentTop="true">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controllers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/album_art">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                app:srcCompat="@drawable/ic_skip_previous" />
+            <ImageView
+                android:id="@+id/play_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="20dp"
+                app:srcCompat="@drawable/ic_play" />
+
+            <ImageView
+                android:id="@+id/forward_button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                app:srcCompat="@drawable/ic_skip_next" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
